@@ -1,7 +1,7 @@
 from load_dotenv import load_dotenv
 import gradio as gr
 
-from agent.openai_agent import handle_message
+from agent.message import handle_message
 
 load_dotenv()
 
