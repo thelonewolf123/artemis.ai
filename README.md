@@ -124,6 +124,36 @@ You’ll see:
 
 ---
 
+### **Chapter 2 — Building an Agent and Connecting It to a UI**
+
+📄 `docs/CHAPTER-2.md`
+
+In this chapter, we move from isolated LLM calls to a **structured agent architecture** and connect it to a real user interface.
+
+This chapter explains the **exact code used in the Artemis backend**, including:
+
+- Why an `openai_agent` layer exists
+- How tools are defined and registered
+- How conversation history from Gradio is reconstructed into LLM messages
+- How the agent is invoked and returns a final response
+- How the agent is wired into a Gradio `ChatInterface`
+
+You’ll walk through:
+
+- `backend/agent/openai_agent.py` — the orchestration layer that owns reasoning
+- `backend/tools/weather.py` — a minimal example of tool calling
+- `backend/main.py` — a thin Gradio UI that delegates all logic to the agent
+
+This chapter emphasizes **clean boundaries**:
+
+- The UI stays simple
+- The agent owns control flow
+- Tools remain explicit and safe
+
+➡️ **This is where Artemis becomes a usable application — not just an experiment**
+
+---
+
 ## 🧪 Backend (Runnable Code)
 
 The `backend/` directory contains a **minimal but real implementation** of Artemis.
