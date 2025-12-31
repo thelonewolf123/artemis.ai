@@ -170,6 +170,24 @@ You’ll learn how to:
 
 ---
 
+### **Chapter 4 — Memory & Conversation Management**
+
+📄 `docs/CHAPTER-4.md`
+
+This chapter introduces **conversation memory** into Artemis.
+
+You’ll learn how to:
+
+- Handle LLM statelessness using thread-based memory
+- Persist conversations across turns
+- Enforce context window limits safely
+- Trim old messages automatically using middleware
+- Manage memory through centralized configuration
+
+➡️ **This is where Artemis gains controlled, scalable memory**
+
+---
+
 ## 🧪 Backend (Runnable Code)
 
 The `backend/` directory contains a **minimal but real implementation** of Artemis.
