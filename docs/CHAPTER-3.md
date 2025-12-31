@@ -316,7 +316,6 @@ In the next chapter, we’ll tackle:
 
 - Why replaying full history breaks at scale
 - Context window limits
-- Short-term vs long-term memory
 - How to introduce memory _without_ breaking agent purity
 
 This is where Artemis becomes **persistent**.
