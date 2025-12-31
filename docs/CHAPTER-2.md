@@ -353,11 +353,26 @@ That’s the goal.
 
 ## **What’s Next**
 
-In the next chapter, we will explore:
+At this point, Artemis is a **cleanly structured agent system**:
 
-- Why replaying _all_ history eventually breaks
-- Token limits and context windows
-- Short-term vs long-term memory
-- How to store memory intentionally
+- The UI is decoupled from reasoning
+- The agent owns control flow
+- Tools are explicit and safe
+- Conversation state is reconstructed deterministically
 
-This is where Artemis starts to **remember — instead of repeating**.
+However, there is still a hidden assumption:
+
+> The agent is tied to a single LLM backend.
+
+Real-world systems don’t work this way.
+
+In the next chapter, we’ll evolve Artemis beyond a single provider by:
+
+- Introducing a configuration layer
+- Supporting multiple LLM backends
+- Adding OpenRouter alongside OpenAI
+- Cleaning up imports and execution flow
+- Running the project as a proper Python module
+
+This is where Artemis stops being a _single-model experiment_
+and starts becoming a **flexible, backend-agnostic AI system**.

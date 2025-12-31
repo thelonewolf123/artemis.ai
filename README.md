@@ -152,6 +152,22 @@ This chapter emphasizes **clean boundaries**:
 
 ➡️ **This is where Artemis becomes a usable application — not just an experiment**
 
+### **Chapter 3 — Multiple LLM Backends & Configuration**
+
+📄 `docs/CHAPTER-3.md`
+
+This chapter upgrades Artemis into a **multi-backend agent system**.
+
+You’ll learn how to:
+
+- Add **OpenRouter** alongside OpenAI
+- Switch LLM providers using a config file
+- Isolate provider-specific logic behind an agent factory
+- Use proper **relative imports**
+- Run the project correctly with `python -m backend.main`
+
+➡️ **This is where Artemis becomes configurable, flexible, and production-aligned**
+
 ---
 
 ## 🧪 Backend (Runnable Code)
