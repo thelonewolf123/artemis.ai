@@ -8,7 +8,8 @@ load_dotenv()
 
 if __name__ == "__main__":
 
+    thread_id = "1"  # hard coded for simplicity, replace it later!
     gr.ChatInterface(
-        fn=lambda prompt, history: handle_message(get_agent(), prompt, history),
+        fn=lambda prompt, _: handle_message(get_agent(), prompt, thread_id),
         title="Artemis AI",
     ).launch()
