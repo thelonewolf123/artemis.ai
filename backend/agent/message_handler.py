@@ -1,10 +1,8 @@
 from langchain.messages import HumanMessage, AIMessage
-from typing import List
-from .xai_agent import get_xai_agent
+from typing import List, Any
 
 
-def handle_message(last_message: str, history: List):
-    agent = get_xai_agent()
+def handle_message(agent: Any, last_message: str, history: List):
     request = []
     for message in history:
         if message["role"] == "assistant":

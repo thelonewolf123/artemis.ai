@@ -1,18 +1,23 @@
 from langchain.agents import create_agent
 from langchain_openai import ChatOpenAI
-from tools.weather import get_weather
+from langchain.tools import BaseTool
+from typing import Sequence
+
 import os
 
 
-def get_xai_agent():
+def get_openrouter_agent(
+    tools: Sequence[BaseTool],
+    model: str = "x-ai/grok-4-fast",
+):
     llm = ChatOpenAI(
-        model="x-ai/grok-4-fast",
+        model=model,
         api_key=os.environ.get("OPENAI_API_KEY"),
         base_url="https://openrouter.ai/api/v1/",
     )
     agent = create_agent(
         llm,
-        tools=[get_weather],
+        tools=tools,
         system_prompt="You are a helpful assistant",
     )
     return agent
