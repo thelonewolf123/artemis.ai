@@ -204,6 +204,7 @@ The backend intentionally stays simple so the **architecture remains visible**.
 
 ```bash
 export OPENAI_API_KEY=your_key_here
+export LLM_PROVIDER="openrouter" or "openai"
 ```
 
 2. Install dependencies (using `uv`, `pip`, or similar)
@@ -211,7 +212,7 @@ export OPENAI_API_KEY=your_key_here
 3. Start the app:
 
 ```bash
-python backend/main.py
+python -m backend.main
 ```
 
 This launches a simple **Gradio chat UI** connected to the agent.
