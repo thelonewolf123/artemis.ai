@@ -1,4 +1,4 @@
-from typing import Literal, Any
+from typing import Literal
 from os import environ
 
 
@@ -6,6 +6,7 @@ class ArtemisConfig:
     llm_provider: Literal["openrouter", "openai"]
     llm_model: str
     max_conversation_token_limit: int
+    telegram_api_key: str
 
     def __init__(self):
         self.llm_provider = environ.get("LLM_PROVIDER", "openrouter")
@@ -13,6 +14,8 @@ class ArtemisConfig:
         self.max_conversation_token_limit = environ.get(
             "MAX_CONVERSATION_TOKEN_LIMIT", 10240
         )  # 10k token limit
+
+        self.telegram_api_key = environ.get("TELEGRAM_API_KEY")
 
 
 settings = ArtemisConfig()  # global object to prevent memory being recreated
