@@ -188,6 +188,24 @@ You’ll learn how to:
 
 ---
 
+### **Chapter 5 — Persistence & Context Control**
+
+📄 `docs/CHAPTER-5.md`
+
+This chapter refactors Artemis for **durability and correctness**.
+
+You’ll learn how to:
+
+- Persist agent state using **SQLite checkpointing**
+- Use `thread_id` for reliable, multi-turn conversations
+- Move memory ownership fully into the agent
+- Enforce **token-aware context limits** with middleware
+- Configure OpenRouter models and memory limits via environment variables
+
+➡️ **This is where Artemis becomes a long-running, production-ready agent**
+
+---
+
 ## 🧪 Backend (Runnable Code)
 
 The `backend/` directory contains a **minimal but real implementation** of Artemis.
