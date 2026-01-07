@@ -170,6 +170,42 @@ You’ll learn how to:
 
 ---
 
+### **Chapter 4 — Memory & Conversation Management**
+
+📄 `docs/CHAPTER-4.md`
+
+This chapter introduces **conversation memory** into Artemis.
+
+You’ll learn how to:
+
+- Handle LLM statelessness using thread-based memory
+- Persist conversations across turns
+- Enforce context window limits safely
+- Trim old messages automatically using middleware
+- Manage memory through centralized configuration
+
+➡️ **This is where Artemis gains controlled, scalable memory**
+
+---
+
+### **Chapter 5 — Persistence & Context Control**
+
+📄 `docs/CHAPTER-5.md`
+
+This chapter refactors Artemis for **durability and correctness**.
+
+You’ll learn how to:
+
+- Persist agent state using **SQLite checkpointing**
+- Use `thread_id` for reliable, multi-turn conversations
+- Move memory ownership fully into the agent
+- Enforce **token-aware context limits** with middleware
+- Configure OpenRouter models and memory limits via environment variables
+
+➡️ **This is where Artemis becomes a long-running, production-ready agent**
+
+---
+
 ## 🧪 Backend (Runnable Code)
 
 The `backend/` directory contains a **minimal but real implementation** of Artemis.
