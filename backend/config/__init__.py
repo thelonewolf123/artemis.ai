@@ -7,6 +7,7 @@ class ArtemisConfig:
     llm_model: str
     max_conversation_token_limit: int
     telegram_api_key: str
+    embedding_model: str
 
     def __init__(self):
         self.llm_provider = environ.get("LLM_PROVIDER", "openrouter")
@@ -16,6 +17,10 @@ class ArtemisConfig:
         )  # 10k token limit
 
         self.telegram_api_key = environ.get("TELEGRAM_API_KEY")
+        self.embedding_model = environ.get(
+            "OPENROUTER_EMBED_MODEL",
+            "text-embedding-3-small",
+        )
 
 
 settings = ArtemisConfig()  # global object to prevent memory being recreated

@@ -206,6 +206,24 @@ You’ll learn how to:
 
 ---
 
+### **Chapter 6 — Telegram Integration & Multi-User Agents**
+
+📄 `docs/CHAPTER-6.md`
+
+This chapter integrates Artemis with **Telegram**, turning it into a real-world, multi-user AI assistant.
+
+You’ll learn how to:
+
+- Create and configure a Telegram bot using **BotFather**
+- Connect Artemis to Telegram using a service layer
+- Map Telegram chats to agent `thread_id`s
+- Handle multiple users and group chats safely
+- Reuse the same agent logic without UI changes
+
+➡️ **This is where Artemis leaves the browser and becomes an always-on, multi-user assistant**
+
+---
+
 ## 🧪 Backend (Runnable Code)
 
 The `backend/` directory contains a **minimal but real implementation** of Artemis.
