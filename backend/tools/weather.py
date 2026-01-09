@@ -1,5 +1,5 @@
-from langchain.tools import tool
 import random
+from langchain.tools import tool
 
 
 @tool

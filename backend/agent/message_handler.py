@@ -1,5 +1,5 @@
-from langchain.messages import HumanMessage, AIMessage
 from typing import Any
+from langchain.messages import HumanMessage
 
 
 def handle_message(agent: Any, last_message: str, user_id: int):

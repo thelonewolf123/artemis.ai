@@ -1,14 +1,7 @@
-from typing import Callable, Optional
-from backend.config import settings
-
 from telegram import Update
-from telegram.ext import (
-    ApplicationBuilder,
-    CommandHandler,
-    ContextTypes,
-    Application,
-    MessageHandler,
-)
+from backend.config import settings
+from typing import Callable, Optional
+from telegram.ext import Application, ContextTypes, CommandHandler, MessageHandler, ApplicationBuilder
 
 
 class Telegram:

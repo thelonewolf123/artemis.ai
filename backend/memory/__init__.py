@@ -1,14 +1,9 @@
-from langchain.agents.middleware import before_model
-from langchain.agents import AgentState
-from langchain.agents.middleware import before_model
-from langgraph.runtime import Runtime
-from backend.config import settings
-from langchain_core.messages.utils import (
-    trim_messages as lc_trim_messages,
-    count_tokens_approximately,
-)
-
 from typing import Any
+from backend.config import settings
+from langgraph.runtime import Runtime
+from langchain.agents import AgentState
+from langchain.agents.middleware import before_model, before_model
+from langchain_core.messages.utils import count_tokens_approximately, trim_messages as lc_trim_messages
 
 
 @before_model
@@ -25,3 +20,6 @@ def trim_messages(state: AgentState, runtime: Runtime) -> dict[str, Any] | None:
     )
 
     return {"messages": new_messages}
+
+def store_long_term_memory(user_text: str) -> str:
+    pass

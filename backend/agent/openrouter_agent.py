@@ -1,6 +1,5 @@
-from langchain_openai import ChatOpenAI
-
 import os
+from langchain_openai import ChatOpenAI
 
 
 def get_openrouter_llm(model: str):

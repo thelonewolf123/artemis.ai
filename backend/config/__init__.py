@@ -9,6 +9,9 @@ class ArtemisConfig:
     telegram_api_key: str
     embedding_model: str
 
+    conv_buffer_db_path: str
+    vector_db_path: str
+
     def __init__(self):
         self.llm_provider = environ.get("LLM_PROVIDER", "openrouter")
         self.llm_model = environ.get("LLM_MODEL_NAME", "x-ai/grok-4-fast")
@@ -21,6 +24,9 @@ class ArtemisConfig:
             "OPENROUTER_EMBED_MODEL",
             "text-embedding-3-small",
         )
+
+        self.conv_buffer_db_path = "./db/short_memory.db"
+        self.vector_db_path = "./db/vector_memory.db"
 
 
 settings = ArtemisConfig()  # global object to prevent memory being recreated

@@ -4,12 +4,13 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from typing import List
 
 from backend.services.embedding import embedding_function
+from backend.config import settings
 
 
 class VectorStore:
     vector_store: SQLiteVec
 
-    def __init__(self, conn_string: str):
+    def __init__(self):
         self.text_splitter = RecursiveCharacterTextSplitter(
             chunk_size=500,
             chunk_overlap=100,
@@ -17,7 +18,7 @@ class VectorStore:
 
         self.vector_store = SQLiteVec(
             table="long_term_memory",
-            db_file=conn_string,
+            db_file=settings.vector_db_path,
             embedding=embedding_function,
         )
 
