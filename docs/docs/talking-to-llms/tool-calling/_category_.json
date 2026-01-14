@@ -1,0 +1,8 @@
+{
+  "label": "Tool Calling",
+  "position": 6,
+  "link": {
+    "type": "doc",
+    "id": "talking-to-llms/tool-calling/index"
+  }
+}
